@@ -81,64 +81,66 @@ const PortfolioPage = () => {
         </div>
       </section>
 
-      {/* Proyectos */}
-    <section className="min-h-screen py-20 px-8 bg-gray-800">
-        <div className="max-w-6xl mx-auto">
-            <h2 className="text-4xl font-bold mb-12 text-center">Proyectos</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {[{
-                title: 'FinUp Actualizado',
-                description: 'Versión mejorada...',
-                tech: ['Html', 'CSS', 'JavaScript'],
-                image: '/p1.png',
-                id: 'finup'
-            },
-            {
-                title: 'Sushiryl',
-                description: 'Aplicación web...',
-                tech: ['Html', 'Css', 'Javascript'],
-                image: '/p2.png',
-                id: 'sushiryl'
-            },
-            {
-                title: 'Este Portafolio',
-                description: 'Portafolio personal...',
-                tech: ['React', 'Tailwind CSS', 'Vercel'],
-                image: '/p3.png',
-                id: 'portafolio'
-            }].map((project, index) => (
-                <div 
-                key={index}
-                className={`bg-gray-900 rounded-lg overflow-hidden shadow-xl transform transition-all duration-1000 ${
-                    calculateTransform(800) > 0.3 ? 'translate-y-0 opacity-100' : 'translate-y-[50px] opacity-0'
-                }`}
-                >
-                <div className="h-48 bg-gray-700 overflow-hidden">
-                    <img 
-                    src={project.image} 
-                    alt={project.title} 
-                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
-                    />
-                </div>
-                <div className="p-6">
-                    <h3 className="text-xl font-bold mb-2">{project.title}</h3>
-                    <p className="text-gray-400 mb-4">{project.description}</p>
-                    <div className="flex flex-wrap gap-2">
-                    {project.tech.map((tech) => (
-                        <span key={tech} className="px-3 py-1 bg-blue-600 rounded-full text-sm">
-                        {tech}
-                        </span>
-                    ))}
-                    </div>
-                    <Link to={`/project/${project.id}`} className="text-blue-500 hover:underline mt-4 inline-block">
-                    Ver informe
-                    </Link>
-                </div>
-                </div>
-            ))}
+      <section className="min-h-screen py-20 px-8 bg-gray-800">
+  <div className="max-w-6xl mx-auto">
+    <h2 className="text-4xl font-bold mb-12 text-center">Proyectos</h2>
+    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {[
+        {
+          title: 'FinUp Actualizado',
+          description: 'Versión mejorada...',
+          tech: ['Html', 'CSS', 'JavaScript'],
+          image: '/portafolio/p1.webp',  // Cambio aquí
+          id: 'finup'
+        },
+        {
+          title: 'Sushiryl',
+          description: 'Aplicación web...',
+          tech: ['Html', 'Css', 'Javascript'],
+          image: '/portafolio/p2.webp',  // Cambio aquí
+          id: 'sushiryl'
+        },
+        {
+          title: 'Este Portafolio',
+          description: 'Portafolio personal...',
+          tech: ['React', 'Tailwind CSS', 'Vercel'],
+          image: '/portafolio/p3.webp',  // Cambio aquí
+          id: 'portfolio'
+        }
+      ].map((project, index) => (
+        <div 
+          key={index}
+          className={`bg-gray-900 rounded-lg overflow-hidden shadow-xl transform transition-all duration-1000 ${
+            calculateTransform(800) > 0.3 ? 'translate-y-0 opacity-100' : 'translate-y-[50px] opacity-0'
+          }`}
+        >
+          <div className="h-48 bg-gray-700 overflow-hidden">
+            <img 
+              src={project.image} 
+              alt={project.title} 
+              className="w-full h-full object-cover hover:scale-110 transition-transform duration-500"
+            />
+          </div>
+          <div className="p-6">
+            <h3 className="text-xl font-bold mb-2">{project.title}</h3>
+            <p className="text-gray-400 mb-4">{project.description}</p>
+            <div className="flex flex-wrap gap-2">
+              {project.tech.map((tech) => (
+                <span key={tech} className="px-3 py-1 bg-blue-600 rounded-full text-sm">
+                  {tech}
+                </span>
+              ))}
             </div>
+            <Link to={`/project/${project.id}`} className="text-blue-500 hover:underline mt-4 inline-block">
+              Ver informe
+            </Link>
+          </div>
         </div>
-        </section>
+      ))}
+    </div>
+  </div>
+</section>
+
 
       {/* Contacto */}
 <section className="min-h-screen flex items-center py-20 px-8">

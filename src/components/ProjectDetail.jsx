@@ -27,7 +27,7 @@ const ProjectDetail = () => {
       • CSS3 para estilos y animaciones
       • JavaScript para la lógica e interactividad
       • Diseño responsive para todos los dispositivos`,
-      image: '/p1.png',
+      image: '/portafolio/p1.webp',
       tech: ['Html', 'CSS', 'JavaScript']
     },
     sushiryl: {
@@ -51,7 +51,7 @@ const ProjectDetail = () => {
       • CSS3 para el diseño responsivo
       • JavaScript para la interactividad
       • API de WhatsApp Business`,
-      image: '/p2.png',
+      image: '/portafolio/p2.webp',
       tech: ['Html', 'Css', 'Javascript']
     },
     portfolio: {
@@ -74,7 +74,7 @@ const ProjectDetail = () => {
       • React para la estructura y componentes
       • Tailwind CSS para los estilos
       • Vercel para el deployment`,
-      image: '/p3.png',
+      image: '/portafolio/p3.webp',
       tech: ['React', 'Tailwind CSS', 'Vercel']
     }
   };
@@ -120,22 +120,24 @@ const ProjectDetail = () => {
         </div>
         {/* Coloca el botón debajo de la imagen en los tres proyectos */}
         <div className="mt-8">
-        {id === 'finup' && (
-            <Button text="Github del proyecto" link="https://github.com/pedroandr3s/finuppirata" />
-        )}
-        {id === 'sushiryl' && (
-            <Button text="Ver Proyecto" link="https://github.com/pedroandr3s/pagina-web-sushiryl" />
-        )}
-        {id === 'portfolio' && (
-            <Button text="Ver Proyecto" link="#" />
-        )}
-        </div>
+  {id === 'finup' && (
+    <Button text="Github del proyecto" link="https://github.com/pedroandr3s/finuppirata" />
+  )}
+  {id === 'sushiryl' && (
+    <Button text="Ver Proyecto" link="https://github.com/pedroandr3s/pagina-web-sushiryl" />
+  )}
+  {id === 'portfolio' && (
+    <Button text="Ver Proyecto" link="https://github.com/pedroandr3s/portafolio" />
+  )}
+</div>
+
+
 
 
         {/* Mostrar el botón solo para "FinUp" */}
         {id === 'finup' && (
            <div className="container mt-8">
-           <a href="/finup.pdf" target="_blank" rel="noopener noreferrer">
+           <a href="/portafolio/finup.pdf" target="_blank" rel="noopener noreferrer">
              <button className="button">PDF</button>
            </a>
          </div>

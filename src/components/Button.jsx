@@ -1,9 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 
-const Button = () => {
+const Button = ({ link }) => {
+  const handleClick = () => {
+    window.location.href = link; // Redirige a la URL proporcionada
+  };
+
   return (
-    <StyledWrapper>
+    <StyledWrapper onClick={handleClick}>
       <div className="button-icon">
         <div className="icon">
           <svg viewBox="0 0 24 24">

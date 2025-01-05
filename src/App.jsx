@@ -4,7 +4,7 @@ import ProjectDetail from './components/ProjectDetail';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/portafolio">
       <Routes>
         <Route path="/" element={<PortfolioPage />} />
         <Route path="/project/:id" element={<ProjectDetail />} />
