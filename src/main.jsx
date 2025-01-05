@@ -1,8 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client'; 
-import Root from './Root';
+import { BrowserRouter } from 'react-router-dom';
+import App from './App';
 
-const rootElement = document.getElementById('root');
-const root = ReactDOM.createRoot(rootElement);
+function Root() {
+  return (
+    <BrowserRouter basename="/portafolio">
+      <App />
+    </BrowserRouter>
+  );
+}
 
-root.render(<Root />);
+export default Root;
