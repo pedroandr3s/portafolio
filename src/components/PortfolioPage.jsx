@@ -104,9 +104,16 @@ const PortfolioPage = () => {
               {
                 title: 'Este Portafolio',
                 description: 'Portafolio personal...',
-                tech: ['React', 'Tailwind CSS', 'Vercel'],
+                tech: ['React', 'Tailwind CSS', 'Vite'],
                 image: '/portafolio/p3.webp',
                 id: 'portfolio'
+              },
+              {
+                title: 'Balance',
+                description: 'Balance de ingresos y egresos...',
+                tech: ['React', 'Firebase', 'Vite'],
+                image: '/portafolio/p4.png  ',
+                id: 'balance'
               }
             ].map((project, index) => (
               <div 

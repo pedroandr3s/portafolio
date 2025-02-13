@@ -2,6 +2,7 @@ import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
 import Button from './Button';
+
 const ProjectDetail = () => {
   const { id } = useParams();
 
@@ -76,7 +77,30 @@ const ProjectDetail = () => {
       • Vercel para el deployment`,
       image: '/portafolio/p3.webp',
       tech: ['React', 'Tailwind CSS', 'Vercel']
-    }
+    },
+    balance: {
+      title: 'Cuaderno de Gastos',
+      fullDescription: `El Cuaderno de Gastos es una aplicación web diseñada para ayudar a gestionar las finanzas personales de manera eficiente. 
+      Permite registrar, visualizar y administrar los gastos de forma sencilla y organizada.
+    
+      Características principales:
+      • Registro rápido de gastos con descripción, monto y fecha
+      • Tabla de visualización con opciones de edición y eliminación
+      • Interfaz intuitiva y minimalista para una mejor experiencia de usuario
+      • Totalmente responsive para su uso en cualquier dispositivo
+    
+      Desafíos técnicos:
+      • Manejo eficiente del estado para actualizar gastos en tiempo real
+      • Diseño responsivo adaptable a diferentes pantallas
+      • Implementación de almacenamiento local para persistencia de datos
+    
+      Tecnologías utilizadas:
+      • HTML, CSS y JavaScript para la estructura y funcionalidades
+      • LocalStorage para almacenamiento de datos en el navegador
+      • GitHub Pages para el deployment`,
+      image: '/portafolio/p4.png',
+      tech: ['React','Firebase','GitHub Pages']
+    }    
   };
 
   const project = projects[id];
@@ -102,7 +126,7 @@ const ProjectDetail = () => {
             className="w-full rounded-lg shadow-xl mb-6"
           />
         </div>
-
+        
         <div className="mb-6 flex flex-wrap gap-2">
           {project.tech.map((tech) => (
             <span key={tech} className="px-3 py-1 bg-blue-600 rounded-full text-sm">
@@ -110,56 +134,24 @@ const ProjectDetail = () => {
             </span>
           ))}
         </div>
-
-        <div className="prose prose-invert max-w-none">
-          {project.fullDescription.split('\n\n').map((paragraph, index) => (
-            <p key={index} className="mb-4 text-gray-300">
-              {paragraph}
-            </p>
-          ))}
+        <div className="prose prose-invert max-w-none whitespace-pre-line text-gray-300">
+  {project.fullDescription}
         </div>
-        {/* Coloca el botón debajo de la imagen en los tres proyectos */}
         <div className="mt-8">
-  {id === 'finup' && (
-    <Button text="Github del proyecto" link="https://github.com/pedroandr3s/finuppirata" />
-  )}
-  {id === 'sushiryl' && (
-    <Button text="Ver Proyecto" link="https://github.com/pedroandr3s/pagina-web-sushiryl" />
-  )}
-  {id === 'portfolio' && (
-    <Button text="Ver Proyecto" link="https://github.com/pedroandr3s/portafolio" />
-  )}
-</div>
+          {id === 'finup' && <Button text="Github del proyecto" link="https://github.com/pedroandr3s/finuppirata" />}
+          {id === 'sushiryl' && <Button text="Ver Proyecto" link="https://github.com/pedroandr3s/pagina-web-sushiryl" />}
+          {id === 'portfolio' && <Button text="Ver Proyecto" link="https://github.com/pedroandr3s/portafolio" />}
+          {id === 'balance' && <Button text="Ver Proyecto" link="https://github.com/pedroandr3s/cuaderno" />}
+        </div>
 
-
-
-
-        {/* Mostrar el botón solo para "FinUp" */}
         {id === 'finup' && (
-           <div className="container mt-8">
-           <a href="/portafolio/finup.pdf" target="_blank" rel="noopener noreferrer">
-             <button className="button">PDF</button>
-           </a>
-         </div>
+          <div className="container mt-8">
+            <a href="/portafolio/finup.pdf" target="_blank" rel="noopener noreferrer">
+              <button className="button">PDF</button>
+            </a>
+          </div>
         )}
       </div>
-
-      <style>
-        {`
-          .button {
-            font-size: 1.4em;
-            padding: 0.6em 19em; /* Ajustado el padding para que el botón esté más equilibrado */
-            border-radius: 0.5em;
-            border: none;
-            background-color: black;
-            color: #fff;
-            cursor: pointer;
-            box-shadow: 2px 5px 3px #ffff;
-            position: relative;
-            z-index: 10;
-          }
-        `}
-      </style>
     </div>
   );
 };
