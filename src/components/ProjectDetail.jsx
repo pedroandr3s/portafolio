@@ -78,29 +78,50 @@ const ProjectDetail = () => {
       image: '/portafolio/p3.webp',
       tech: ['React', 'Tailwind CSS', 'Vercel']
     },
-    balance: {
-      title: 'Cuaderno de Gastos',
-      fullDescription: `El Cuaderno de Gastos es una aplicación web diseñada para ayudar a gestionar las finanzas personales de manera eficiente. 
-      Permite registrar, visualizar y administrar los gastos de forma sencilla y organizada.
+    contabilidad: {
+      title: 'Contabilidad',
+      fullDescription: `Contabilidad es una página web diseñada para optimizar el tiempo en una oficina contable, digitalizando el proceso del libro mayor y automatizando la generación de balances anuales. 
+      Antes, realizar registros manuales en el libro mayor consumía demasiado tiempo y aumentaba la posibilidad de errores, lo que complicaba la elaboración de estados financieros. Con esta solución, todo el proceso contable se maneja desde una única plataforma web, facilitando la organización y el análisis de datos.
     
-      Características principales:
-      • Registro rápido de gastos con descripción, monto y fecha
-      • Tabla de visualización con opciones de edición y eliminación
-      • Interfaz intuitiva y minimalista para una mejor experiencia de usuario
-      • Totalmente responsive para su uso en cualquier dispositivo
+      Estructura y funcionamiento:  
     
-      Desafíos técnicos:
-      • Manejo eficiente del estado para actualizar gastos en tiempo real
-      • Diseño responsivo adaptable a diferentes pantallas
-      • Implementación de almacenamiento local para persistencia de datos
+      1. Empresa  
+         El proceso comienza con el registro de la empresa. A través de un botón simple, se ingresa el nombre y RUT de la empresa, lo que permite gestionar sus registros contables de manera organizada.  
     
-      Tecnologías utilizadas:
-      • HTML, CSS y JavaScript para la estructura y funcionalidades
-      • LocalStorage para almacenamiento de datos en el navegador
+      2. Registro  
+         Luego, se accede al formulario de registros contables, diseñado para recopilar de manera eficiente toda la información necesaria para optimizar el uso de los datos. Este formulario incluye campos para:  
+         • Nombre-Año-Mes de la cuenta contable  
+         • Monto del debe y haber
+         • Cuenta a la que se dirige el monto 
+         • Otros datos clave para la categorización y análisis financiero  
+    
+      3. Historial  
+         Una vez ingresados los datos, se almacenan en el historial, que es una adaptación digital del libro mayor contable. Se implementó una tabla con diseño cuadriculado similar a las hojas del libro mayor físico, facilitando la lectura y comprensión para los usuarios acostumbrados a los registros tradicionales. En esta tabla se reflejan todas las operaciones contables realizadas, organizadas por fecha y categoría.  
+    
+      4. Balance  
+         Con base en los registros del historial, el sistema genera automáticamente un balance contable detallado. En este balance se procesan y organizan los datos en secciones como:  
+         • Nombre de Cuentas  
+         • Sumas: Débito y Crédito  
+         • Saldos: Deudor y Acreedor  
+         • Inventario: Activo y Pasivo  
+         • Resultado: Pérdidas y Ganancias  
+    
+         Una de las principales ventajas es que el balance generado puede descargarse en formato Excel, simplificando el proceso de generación de informes contables y permitiendo su uso en auditorías o reportes financieros.  
+    
+      Desafíos técnicos:  
+      • Creación de una interfaz intuitiva que facilite la transición del registro manual al digital  
+      • Manejo eficiente del estado de los datos para actualizar los registros en tiempo real  
+      • Implementación de almacenamiento seguro para garantizar la integridad de los datos contables  
+      • Diseño responsivo para su uso en distintos dispositivos  
+    
+      Tecnologías utilizadas:  
+      • React para la interfaz interactiva  
+      • Firebase para almacenamiento y gestión de datos  
       • GitHub Pages para el deployment`,
-      image: '/portafolio/p4.png',
-      tech: ['React','Firebase','GitHub Pages']
-    }    
+      image: '/portafolio/p5.png',
+      tech: ['React', 'Firebase', 'GitHub Pages']
+    }
+    
   };
 
   const project = projects[id];

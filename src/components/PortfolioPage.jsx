@@ -26,8 +26,8 @@ const PortfolioPage = () => {
           scrollY > 100 ? 'translate-y-[-50px] opacity-0' : 'translate-y-0 opacity-100'
         }`}>
           <h1 className="text-6xl font-bold mb-4">Pedro Vera</h1>
-          <p className="text-xl text-gray-400">Desarrollador Web | Diseñador UX | Creativo</p>
-        </div>
+          <p className="text-xl text-gray-400">Desarrollador Web | Estudiante de Ingeniería en Informática | Creativo</p>
+          </div>
         
         <div className="absolute bottom-10 animate-bounce">
           <ChevronDown size={40} />
@@ -42,21 +42,22 @@ const PortfolioPage = () => {
           <h2 className="text-4xl font-bold mb-8">Sobre Mí</h2>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <p className="text-gray-300 mb-4">
-                Soy un desarrollador web en formación, con experiencia en el desarrollo full-stack utilizando tecnologías como MongoDB, Express,
-                Angular, Node.js (MEAN Stack) y React. Me motiva resolver problemas complejos, crear interfaces intuitivas y optimizar la
-                experiencia del usuario. Además, tengo un interés especial en la minería de datos, la ciberseguridad y el diseño UX.
-              </p>
-              <p className="text-gray-300">
-                Con varios certificados en áreas relacionadas con desarrollo web y metodologías ágiles, siempre busco aprender y crecer 
-                profesionalmente. Mi enfoque está en construir soluciones eficientes y accesibles, con una mentalidad orientada al detalle, 
-                la mejora continua y pensar fuera de la caja manteniendo un equilibrio entre la tecnología y el liderazgo en cada proyecto que realizo.
-              </p>
+            <p className="text-gray-300 mb-4">
+            Soy un desarrollador web en formación, con experiencia en el desarrollo frontend utilizando React, junto con tecnologías como Next.js, 
+            Tailwind CSS y TypeScript. Me apasiona construir interfaces dinámicas y responsivas, mejorar el rendimiento de las aplicaciones y 
+            ofrecer experiencias de usuario intuitivas. Además, tengo un interés especial en la minería de datos, la ciberseguridad y el diseño UX.
+          </p>
+          <p className="text-gray-300">
+            Con varios certificados en áreas relacionadas con desarrollo web y metodologías ágiles, siempre busco aprender y crecer profesionalmente. 
+            Mi enfoque está en construir soluciones eficientes y accesibles, con una mentalidad orientada al detalle, la mejora continua y pensar fuera 
+            de la caja, manteniendo un equilibrio entre la tecnología y el liderazgo en cada proyecto que realizo.
+          </p>
+
             </div>
             <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
               <h3 className="text-xl font-bold mb-4">Habilidades</h3>
               <div className="space-y-2">
-                {['Backend', 'Front-end', 'Innovación', 'Creatividad', 'Liderazgo'].map((skill, index) => (
+                {['Backend', 'Front-end', 'Innovación', 'Creatividad', 'Team Work'].map((skill, index) => (
                   <div key={skill} className="flex items-center">
                     <div className="w-full bg-gray-700 rounded-full h-2.5">
                       <div
@@ -114,6 +115,14 @@ const PortfolioPage = () => {
                 tech: ['React', 'Firebase', 'Vite'],
                 image: '/portafolio/p4.png  ',
                 id: 'balance'
+              }
+              ,
+              {
+                title: 'Contabilidad',
+                description: 'Registro contable ...',
+                tech: ['React', 'Firebase', 'Creatividad'],
+                image: '/portafolio/p5.png  ',
+                id: 'contabilidad'
               }
             ].map((project, index) => (
               <div 
