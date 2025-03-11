@@ -35,52 +35,111 @@ const PortfolioPage = () => {
       </header>
 
       {/* Sobre Mí */}
-      <section className="min-h-screen flex items-center py-20 px-8">
-        <div className={`max-w-4xl mx-auto transform transition-all duration-1000 ${
-          calculateTransform(300) > 0.3 ? 'translate-x-0 opacity-100' : 'translate-x-[-100px] opacity-0'
-        }`}>
-          <h2 className="text-4xl font-bold mb-8">Sobre Mí</h2>
-          <div className="grid md:grid-cols-2 gap-8">
-            <div>
-            <p className="text-gray-300 mb-4">
-            Soy un desarrollador web en formación, con experiencia en el desarrollo frontend utilizando React, junto con tecnologías como Next.js, 
-            Tailwind CSS y TypeScript. Me apasiona construir interfaces dinámicas y responsivas, mejorar el rendimiento de las aplicaciones y 
-            ofrecer experiencias de usuario intuitivas. Además, tengo un interés especial en la minería de datos, la ciberseguridad y el diseño UX.
-          </p>
-          <p className="text-gray-300">
-            Con varios certificados en áreas relacionadas con desarrollo web y metodologías ágiles, siempre busco aprender y crecer profesionalmente. 
-            Mi enfoque está en construir soluciones eficientes y accesibles, con una mentalidad orientada al detalle, la mejora continua y pensar fuera 
-            de la caja, manteniendo un equilibrio entre la tecnología y el liderazgo en cada proyecto que realizo.
-          </p>
-
-            </div>
-            <div className="bg-gray-800 p-6 rounded-lg shadow-lg">
-              <h3 className="text-xl font-bold mb-4">Habilidades</h3>
-              <div className="space-y-2">
-                {['Backend', 'Front-end', 'Innovación', 'Creatividad', 'Team Work'].map((skill, index) => (
-                  <div key={skill} className="flex items-center">
-                    <div className="w-full bg-gray-700 rounded-full h-2.5">
-                      <div
-                        className="bg-blue-600 h-2.5 rounded-full"
-                        style={{
-                          width: [
-                            '75%', // Backend
-                            '85%', // Front-end
-                            '80%', // Innovación
-                            '95%', // Creatividad
-                            '90%'  // Liderazgo
-                          ][index]
-                        }}
-                      ></div>
-                    </div>
-                    <span className="ml-2 min-w-[100px]">{skill}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
+<section className="min-h-screen flex items-center py-20 px-8 overflow-hidden">
+  <div className={`max-w-5xl mx-auto transform transition-all duration-1000 ${
+    calculateTransform(300) > 0.3 ? 'translate-x-0 opacity-100' : 'translate-x-[-100px] opacity-0'
+  }`}>
+    <h2 className="text-4xl font-bold mb-8 relative">
+      Sobre Mí
+      <span className="absolute -bottom-2 left-0 w-24 h-1 bg-blue-500"></span>
+    </h2>
+    
+    <div className="grid md:grid-cols-2 gap-8">
+      <div className="space-y-4">
+        <p className="text-gray-300 relative z-10 backdrop-blur-sm p-4 rounded-lg border border-gray-700 bg-gray-800/70">
+          <span className="text-blue-400 font-mono">&lt;developer&gt;</span><br/>
+          Soy un desarrollador web en formación, con experiencia en el desarrollo frontend utilizando <span className="text-yellow-400">React</span>, junto con tecnologías como <span className="text-green-400">Next.js</span>, 
+          <span className="text-blue-500">Tailwind CSS</span> y <span className="text-blue-400">TypeScript</span>. Me apasiona construir interfaces dinámicas y responsivas, mejorar el rendimiento de las aplicaciones y 
+          ofrecer experiencias de usuario intuitivas. Además, tengo un interés especial en la minería de datos, la ciberseguridad y el diseño UX.
+          <br/><span className="text-blue-400 font-mono">&lt;/developer&gt;</span>
+        </p>
+        
+        <div className="flex flex-wrap gap-2 my-4">
+          {['HTML', 'CSS', 'JavaScript', 'React', 'TypeScript', 'Tailwind', 'Next.js', 'Firebase', 'Git'].map((skill) => (
+            <span 
+              key={skill} 
+              className="px-3 py-1 bg-gradient-to-r from-blue-600 to-purple-600 rounded-full text-sm transform transition-transform hover:scale-110 hover:shadow-lg"
+            >
+              {skill}
+            </span>
+          ))}
+        </div>
+        
+        <p className="text-gray-300 relative z-10 backdrop-blur-sm p-4 rounded-lg border border-gray-700 bg-gray-800/70">
+          <span className="text-purple-400 font-mono">&lt;mindset&gt;</span><br/>
+          Con varios certificados en áreas relacionadas con desarrollo web y metodologías ágiles, siempre busco aprender y crecer profesionalmente. 
+          Mi enfoque está en construir soluciones eficientes y accesibles, con una mentalidad orientada al detalle, la mejora continua y pensar fuera 
+          de la caja, manteniendo un equilibrio entre la tecnología y el liderazgo en cada proyecto que realizo.
+          <br/><span className="text-purple-400 font-mono">&lt;/mindset&gt;</span>
+        </p>
+      </div>
+      
+      <div className="flex flex-col justify-center items-center relative">
+        {/* Elementos decorativos que representan código */}
+        <div className="absolute opacity-20 top-0 left-0 text-xs text-blue-500 font-mono overflow-hidden h-full w-full">
+          {'const Developer = () => {'}<br/>
+          {'  const [skills] = useState([]);'}<br/>
+          {'  useEffect(() => {'}<br/>
+          {'    // Siempre aprendiendo'}<br/>
+          {'    learnNewSkills();'}<br/>
+          {'  }, []);'}<br/>
+          {'  return <CreativeSolutions />;'}<br/>
+          {'};'}
+        </div>
+        
+        <div className="rounded-lg overflow-hidden shadow-2xl border-4 border-blue-600 transform hover:rotate-2 transition-all duration-500 relative z-10">
+          <div className="absolute -top-4 -left-4 px-3 py-1 bg-blue-600 text-white text-sm rounded-md z-20 transform rotate-12">
+            ./yo.jpg
+          </div>
+          <img 
+            src="./yo.jpg" 
+            alt="Pedro Vera" 
+            className="w-full h-auto object-cover transform transition-all duration-500 hover:scale-105"
+          />
+          <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/70 to-transparent p-4">
+            <p className="text-white text-center font-mono text-sm">
+              <span className="text-yellow-400">function</span> <span className="text-green-400">creativeDeveloper</span>() &#123; <span className="text-purple-400">return</span> <span className="text-blue-400">true</span>; &#125;
+            </p>
           </div>
         </div>
-      </section>
+        
+        {/* Terminal effect */}
+        <div className="mt-6 w-full max-w-md bg-gray-900 rounded-lg border border-gray-700 overflow-hidden shadow-lg">
+          <div className="bg-gray-800 p-2 flex items-center gap-2">
+            <div className="w-3 h-3 rounded-full bg-red-500"></div>
+            <div className="w-3 h-3 rounded-full bg-yellow-500"></div>
+            <div className="w-3 h-3 rounded-full bg-green-500"></div>
+            <span className="text-xs text-gray-400 ml-2">terminal</span>
+          </div>
+          <div className="p-3 font-mono text-xs text-green-400">
+            <p>{`> Pedro.getExpertise()`}</p>
+            <p className="text-white">{`["Frontend", "UX/UI", "Web Development", "ReactJS"]`}</p>
+            <p>{`> Pedro.isLearning()`}</p>
+            <p className="text-white">true <span className="animate-pulse">_</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    {/* Visual programming stats */}
+<div className="mt-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+  {[
+    { label: 'Proyectos', value: '5+' },
+    { label: 'Tecnologías', value: '4+' },
+    { label: 'Certificados', value: '15+' },
+    { label: 'Café consumido', value: '∞' }
+  ].map((stat, index) => (
+    <div 
+      key={index} 
+      className="bg-gray-800/50 border border-blue-500/30 rounded-lg p-3 text-center transform transition-all duration-500 hover:scale-105 hover:shadow-lg hover:shadow-blue-500/20"
+    >
+      <p className="text-2xl md:text-3xl text-blue-400 font-bold">{stat.value}</p>
+      <p className="text-sm md:text-base text-gray-400">{stat.label}</p>
+    </div>
+  ))}
+</div>
+  </div>
+</section>
 
       {/* Proyectos */}
       <section className="min-h-screen py-20 px-8 bg-gray-800">
@@ -105,7 +164,7 @@ const PortfolioPage = () => {
               {
                 title: 'Este Portafolio',
                 description: 'Portafolio personal...',
-                tech: ['React', 'Tailwind CSS', 'Vite'],
+                tech: ['JSX', 'Tailwind CSS', 'Vite'],
                 image: '/portafolio/p3.webp',
                 id: 'portfolio'
               },
@@ -120,7 +179,7 @@ const PortfolioPage = () => {
               {
                 title: 'Contabilidad',
                 description: 'Registro contable ...',
-                tech: ['React', 'Firebase', 'Creatividad'],
+                tech: ['React', 'Firebase', 'Ingeniosidad'],
                 image: '/portafolio/p5.png  ',
                 id: 'contabilidad'
               }
