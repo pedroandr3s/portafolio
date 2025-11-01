@@ -38,7 +38,7 @@ export const projects = [
     • Implementación de almacenamiento seguro para garantizar la integridad de los datos contables  
     • Diseño responsivo para su uso en distintos dispositivos`,
     tech: ['React', 'Firebase', 'Excel Export', 'Responsive Design'],
-    image: '/portafolio/p5.png',
+    image: 'https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?w=800&q=80',
     gradient: 'from-blue-500 to-cyan-500',
     github: 'https://github.com/pedroandr3s/contabilidad',
     featured: true
@@ -68,7 +68,7 @@ export const projects = [
     • JavaScript para la lógica e interactividad
     • Diseño responsive para todos los dispositivos`,
     tech: ['HTML5', 'CSS3', 'JavaScript', 'Responsive'],
-    image: '/portafolio/p1.webp',
+    image: 'https://images.unsplash.com/photo-1579621970563-ebec7560ff3e?w=800&q=80',
     gradient: 'from-purple-500 to-pink-500',
     github: 'https://github.com/pedroandr3s/finuppirata',
     pdf: '/portafolio/finup.pdf',
@@ -99,7 +99,7 @@ export const projects = [
     • JavaScript para la interactividad
     • API de WhatsApp Business`,
     tech: ['HTML5', 'CSS3', 'JavaScript', 'WhatsApp API'],
-    image: '/portafolio/p2.webp',
+    image: 'https://images.unsplash.com/photo-1579584425555-c3ce17fd4351?w=800&q=80',
     gradient: 'from-green-500 to-emerald-500',
     github: 'https://github.com/pedroandr3s/pagina-web-sushiryl',
     featured: true
@@ -129,7 +129,7 @@ export const projects = [
     • Vite como build tool
     • Chart.js para visualizaciones`,
     tech: ['React', 'Firebase', 'Vite', 'Chart.js'],
-    image: '/portafolio/p4.png',
+    image: 'https://images.unsplash.com/photo-1554224154-26032ffc0d07?w=800&q=80',
     gradient: 'from-orange-500 to-red-500',
     github: 'https://github.com/pedroandr3s/cuaderno',
     featured: false
