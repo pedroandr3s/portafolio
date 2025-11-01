@@ -4,7 +4,7 @@ import ProjectDetailPage from './pages/ProjectDetailPage';
 
 function App() {
   return (
-    <Router basename="/portafolio">
+    <Router basename="/">
       <Routes>
         <Route path="/" element={<PortfolioPage />} />
         <Route path="/project/:id" element={<ProjectDetailPage />} />
