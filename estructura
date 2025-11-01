@@ -1,0 +1,55 @@
+src/
+├── components/
+│   ├── layout/
+│   │   ├── Navigation.jsx          // Barra de navegación flotante
+│   │   ├── Footer.jsx              // Footer con links sociales
+│   │   └── Layout.jsx              // Wrapper general
+│   │
+│   ├── sections/
+│   │   ├── Hero.jsx                // Sección hero principal
+│   │   ├── About.jsx               // Sección sobre mí
+│   │   ├── Projects.jsx            // Sección de proyectos
+│   │   ├── Certifications.jsx      // Sección de certificados
+│   │   └── Contact.jsx             // Sección de contacto
+│   │
+│   ├── ui/
+│   │   ├── Button.jsx              // Botones reutilizables
+│   │   ├── Card.jsx                // Tarjetas genéricas
+│   │   ├── Badge.jsx               // Badges de tecnologías
+│   │   ├── SectionTitle.jsx        // Títulos de secciones
+│   │   ├── GlowEffect.jsx          // Efecto de brillo del cursor
+│   │   └── ScrollIndicator.jsx     // Indicador de scroll
+│   │
+│   ├── project/
+│   │   ├── ProjectCard.jsx         // Tarjeta individual de proyecto
+│   │   ├── ProjectDetail.jsx       // Detalle completo del proyecto
+│   │   └── ProjectGrid.jsx         // Grid de proyectos
+│   │
+│   ├── certification/
+│   │   ├── CertificationCard.jsx   // Tarjeta de certificado
+│   │   └── CertificationList.jsx   // Lista de certificados
+│   │
+│   └── about/
+│       ├── ProfileCard.jsx         // Tarjeta de perfil con foto
+│       ├── StatsGrid.jsx           // Grid de estadísticas
+│       ├── TechStack.jsx           // Stack tecnológico
+│       └── InfoCard.jsx            // Tarjetas de información
+│
+├── data/
+│   ├── projects.js                 // Datos de proyectos
+│   ├── certifications.js           // Datos de certificaciones
+│   └── techStack.js                // Lista de tecnologías
+│
+├── hooks/
+│   ├── useActiveSection.js         // Hook para sección activa
+│   ├── useMousePosition.js         // Hook para posición del mouse
+│   └── useScrollTo.js              // Hook para scroll suave
+│
+├── utils/
+│   └── animations.js               // Utilidades de animación
+│
+├── pages/
+│   ├── PortfolioPage.jsx           // Página principal (orquestador)
+│   └── ProjectDetailPage.jsx       // Página de detalle de proyecto
+│
+└── App.jsx                         // Router principal
