@@ -139,7 +139,7 @@ export const projects = [
     title: 'Portfolio Personal',
     shortDescription: 'Portfolio personal con diseño moderno y animaciones.',
     description: 'Mi portfolio personal desarrollado con React, mostrando mis proyectos y habilidades con un diseño moderno y animaciones suaves.',
-    fullDescription: `Mi portfolio personal es una muestra de mi trabajo y habilidades como desarrollador web. 
+    fullDescription: `Mi portfolio personal es una muestra de mi trabajo y habilidades como desarrollador web.
     Diseñado y desarrollado completamente por mí utilizando tecnologías modernas.
 
     Características principales:
@@ -158,9 +158,194 @@ export const projects = [
     • Tailwind CSS para los estilos
     • Vercel para el deployment`,
     tech: ['React', 'Tailwind CSS', 'Vite', 'Vercel'],
-    image: '/portafolio/p3.webp',
+    image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80',
     gradient: 'from-indigo-500 to-purple-500',
-    github: 'https://github.com/pedroandr3s/portafolio',
+    github: '',
     featured: false
+  },
+  {
+    id: 'taskmaster',
+    title: 'TaskMaster Pro',
+    shortDescription: 'Gestor de tareas avanzado con metodología Kanban y Pomodoro.',
+    description: 'Aplicación de gestión de tareas que combina la metodología Kanban con técnica Pomodoro para maximizar la productividad.',
+    fullDescription: `TaskMaster Pro es una aplicación completa de gestión de tareas diseñada para profesionales y equipos que buscan aumentar su productividad.
+
+    Características principales:
+    • Tablero Kanban interactivo con drag & drop
+    • Timer Pomodoro integrado con estadísticas
+    • Sistema de etiquetas y prioridades personalizables
+    • Colaboración en tiempo real entre equipos
+    • Notificaciones inteligentes y recordatorios
+    • Análisis de productividad con gráficos detallados
+    • Modo oscuro y temas personalizables
+
+    Desafíos técnicos:
+    • Implementación de drag & drop fluido y responsivo
+    • Sincronización en tiempo real entre múltiples usuarios
+    • Optimización de rendimiento con grandes cantidades de tareas
+    • Sistema de notificaciones sin afectar el rendimiento
+    • Arquitectura escalable para equipos grandes
+
+    Tecnologías utilizadas:
+    • React + TypeScript para type safety
+    • Redux Toolkit para manejo de estado complejo
+    • Firebase Realtime Database para sincronización
+    • React Beautiful DnD para drag & drop
+    • Recharts para visualización de datos`,
+    tech: ['React', 'TypeScript', 'Redux', 'Firebase', 'DnD'],
+    image: 'https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=800&q=80',
+    gradient: 'from-teal-500 to-cyan-500',
+    github: '',
+    featured: true
+  },
+  {
+    id: 'ecommerce',
+    title: 'ShopHub',
+    shortDescription: 'E-commerce completo con carrito, pagos y gestión de inventario.',
+    description: 'Plataforma de comercio electrónico full-stack con integración de pagos, gestión de inventario y panel de administración.',
+    fullDescription: `ShopHub es una solución completa de e-commerce desarrollada para negocios pequeños y medianos que desean establecer su presencia online.
+
+    Características principales:
+    • Catálogo de productos con filtros avanzados
+    • Carrito de compras con persistencia
+    • Integración con pasarelas de pago (Stripe, PayPal)
+    • Sistema de autenticación y perfiles de usuario
+    • Panel de administración completo
+    • Gestión de inventario en tiempo real
+    • Sistema de reviews y calificaciones
+    • Búsqueda inteligente con autocompletado
+    • Envío de emails transaccionales
+
+    Desafíos técnicos:
+    • Implementación segura de pagos
+    • Manejo de transacciones y concurrencia en inventario
+    • Optimización de búsquedas con grandes catálogos
+    • Sistema de caché para mejorar rendimiento
+    • SEO optimization para mejor posicionamiento
+
+    Tecnologías utilizadas:
+    • Next.js para SSR y mejor SEO
+    • Node.js + Express para el backend
+    • PostgreSQL para base de datos relacional
+    • Stripe API para procesamiento de pagos
+    • Redis para caché y sesiones`,
+    tech: ['Next.js', 'Node.js', 'PostgreSQL', 'Stripe', 'Redis'],
+    image: 'https://images.unsplash.com/photo-1557821552-17105176677c?w=800&q=80',
+    gradient: 'from-rose-500 to-pink-500',
+    github: '',
+    featured: true
+  },
+  {
+    id: 'weatherapp',
+    title: 'WeatherNow',
+    shortDescription: 'Aplicación del clima con pronósticos detallados y mapas interactivos.',
+    description: 'App del clima con datos en tiempo real, pronósticos de 7 días, mapas de radar y alertas meteorológicas.',
+    fullDescription: `WeatherNow es una aplicación meteorológica completa que proporciona información detallada del clima con una interfaz intuitiva y hermosa.
+
+    Características principales:
+    • Clima actual con datos detallados (humedad, viento, UV, etc.)
+    • Pronóstico extendido de 7 días
+    • Pronóstico por horas con gráficos interactivos
+    • Mapas de radar de precipitación en tiempo real
+    • Sistema de alertas meteorológicas
+    • Ubicaciones favoritas guardadas
+    • Diseño adaptativo con animaciones según clima
+    • Soporte para múltiples idiomas y unidades
+
+    Desafíos técnicos:
+    • Integración con múltiples APIs meteorológicas
+    • Manejo eficiente de datos geoespaciales
+    • Optimización de llamadas a API con caché inteligente
+    • Animaciones fluidas sin afectar rendimiento
+    • Soporte offline con Service Workers
+
+    Tecnologías utilizadas:
+    • React Native para aplicación móvil multiplataforma
+    • OpenWeather API para datos meteorológicos
+    • Mapbox para mapas interactivos
+    • AsyncStorage para persistencia local
+    • React Query para manejo de caché`,
+    tech: ['React Native', 'OpenWeather API', 'Mapbox', 'React Query'],
+    image: 'https://images.unsplash.com/photo-1592210454359-9043f067919b?w=800&q=80',
+    gradient: 'from-sky-400 to-blue-500',
+    github: '',
+    featured: false
+  },
+  {
+    id: 'fitness',
+    title: 'FitTrack',
+    shortDescription: 'Aplicación de fitness con seguimiento de entrenamientos y nutrición.',
+    description: 'App completa de fitness que combina seguimiento de ejercicios, planificación nutricional y análisis de progreso.',
+    fullDescription: `FitTrack es una aplicación integral de fitness diseñada para ayudar a los usuarios a alcanzar sus objetivos de salud y bienestar.
+
+    Características principales:
+    • Biblioteca de más de 300 ejercicios con videos demostrativos
+    • Planes de entrenamiento personalizados
+    • Seguimiento de calorías y macronutrientes
+    • Base de datos de alimentos con búsqueda rápida
+    • Gráficos de progreso y estadísticas detalladas
+    • Sistema de logros y gamificación
+    • Integración con dispositivos wearables
+    • Recordatorios para entrenamientos y comidas
+    • Modo social para compartir progreso
+
+    Desafíos técnicos:
+    • Sincronización con APIs de dispositivos wearables
+    • Algoritmos de recomendación de entrenamientos
+    • Cálculos nutricionales precisos y en tiempo real
+    • Manejo de gran cantidad de datos de usuario
+    • Optimización de videos y contenido multimedia
+
+    Tecnologías utilizadas:
+    • React Native + Expo para desarrollo móvil
+    • Node.js + MongoDB para backend
+    • GraphQL para queries eficientes
+    • AWS S3 para almacenamiento de videos
+    • Socket.io para features sociales en tiempo real`,
+    tech: ['React Native', 'Node.js', 'MongoDB', 'GraphQL', 'AWS'],
+    image: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=800&q=80',
+    gradient: 'from-lime-500 to-green-500',
+    github: '',
+    featured: false
+  },
+  {
+    id: 'chatapp',
+    title: 'ChatConnect',
+    shortDescription: 'Aplicación de mensajería en tiempo real con videollamadas.',
+    description: 'Plataforma de comunicación completa con chat en tiempo real, videollamadas, llamadas de voz y compartir archivos.',
+    fullDescription: `ChatConnect es una aplicación de mensajería moderna que ofrece todas las funcionalidades necesarias para comunicación efectiva.
+
+    Características principales:
+    • Mensajería instantánea con indicadores de lectura
+    • Videollamadas 1:1 y grupales con calidad HD
+    • Llamadas de voz con baja latencia
+    • Compartir archivos, imágenes y videos
+    • Creación de grupos y canales
+    • Mensajes encriptados de extremo a extremo
+    • Reacciones con emojis y respuestas en hilo
+    • Búsqueda avanzada en historial de chats
+    • Estados y stories temporales
+    • Modo oscuro y temas personalizables
+
+    Desafíos técnicos:
+    • Implementación de WebRTC para videollamadas
+    • Encriptación segura de mensajes
+    • Optimización de transferencia de archivos grandes
+    • Manejo de conexiones en tiempo real a escala
+    • Compresión inteligente de multimedia
+    • Sistema de notificaciones push eficiente
+
+    Tecnologías utilizadas:
+    • React + Socket.io para tiempo real
+    • WebRTC para videollamadas
+    • Node.js + Express para backend
+    • MongoDB para almacenamiento de mensajes
+    • Redis para presencia y caché
+    • JWT para autenticación segura`,
+    tech: ['React', 'Socket.io', 'WebRTC', 'Node.js', 'MongoDB'],
+    image: 'https://images.unsplash.com/photo-1611606063065-ee7946f0787a?w=800&q=80',
+    gradient: 'from-violet-500 to-fuchsia-500',
+    github: '',
+    featured: true
   }
 ];
